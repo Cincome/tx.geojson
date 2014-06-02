@@ -1,4 +1,23 @@
-tx.json
-=======
+# tx.json
 
-GeoJSON and TopoJSON for the State of Texas
+[GeoJSON](http://geojson.org/) and [TopoJSON](https://github.com/mbostock/topojson/wiki) for the State of Texas
+
+## Files
+
+- texas.geojson - State outline
+- counties/tx_counties.geojson - All Texas counties
+- counties/tx_counties.topojson - TopoJSON of All Texas counties
+* counties/individual/*.geojson - Individual Texas counties
+
+## Source Data
+
+Source shapefiles are in `/source`. Source files were downloaded from the [http://nationalatlas.gov/](http://nationalatlas.gov/).
+
+## Recreating JSON files
+
+Prerequisites:
+
+- GDAL/OGR: `apt-get install gdal-bin`
+- topojson: `npm install -g topojson`
+
+Then just run `make all`
