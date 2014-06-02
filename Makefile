@@ -1,20 +1,20 @@
 all: state counties
 
-state: texas.geojson
+state: tx.geojson
 
 counties: counties/tx_counties.geojson \
 	counties/tx_counties.topojson \
 	counties/individual
 
 clean: 
-	rm -f texas.geojson
+	rm -f tx.geojson
 	rm -rf counties/
 
 
 # $@ is name of target
 # $< is name of first dependency
 
-texas.geojson: source/texas.shp
+tx.geojson: source/texas.shp
 	ogr2ogr -f 'GeoJSON' $@ $<
 
 counties/tx_counties.geojson: source/tx_counties.shp
