@@ -23,8 +23,7 @@ counties/tx_counties.geojson: source/tx_counties.shp
 
 counties/tx_counties.topojson: source/tx_counties.shp
 	mkdir -p counties
-	topojson -o $@ --no-pre-quantization \
-		--post-quantization=1e6 --simplify 7e-7 \
+	topojson -o $@ \
 		--properties \
 		--id-property=+FIPS $<
 
