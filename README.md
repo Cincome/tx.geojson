@@ -2,6 +2,8 @@
 
 [GeoJSON](http://geojson.org/) and [TopoJSON](https://github.com/mbostock/topojson/wiki) for the State of Texas
 
+![](https://raw.githubusercontent.com/TNRIS/tx.geojson/master/img/texas.png)
+
 ## Files
 
 - `tx.geojson` - State outline
